@@ -40,7 +40,6 @@ public class FlippableObject : MonoBehaviour
 
     void UpdateSprite(FlipStates value)
     {
-        Debug.Log(value);
         if(dimension != value)
         {
             if(dimension == FlipStates.Blue)
