@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-    //bool active = false;
     [SerializeField] Animator anim;
-    //Animation animation;
     public bool isActive = false;
 
     private void Start()
@@ -24,16 +22,16 @@ public class PressurePlate : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag ("Pressure"))
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             isActive = true;
             anim.SetBool("active", isActive);
         }
-        else if (collision.gameObject.CompareTag("Player"))
+        /*else if (collision.gameObject.CompareTag("Player"))
         {
             isActive = true;
             anim.SetBool("active", isActive);
-        }
+        }*/
     }
 
     private void OnCollisionExit2D(Collision2D collision)

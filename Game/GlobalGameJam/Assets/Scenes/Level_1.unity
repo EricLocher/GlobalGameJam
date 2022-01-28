@@ -152,7 +152,7 @@ Transform:
   m_Children:
   - {fileID: 1166103093}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &678101455
 GameObject:
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 1196305278}
   m_Layer: 9
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Pressure
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -488,6 +488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
+  interactableObjects: []
   flipX: 0
 --- !u!212 &1196305275
 SpriteRenderer:
@@ -686,7 +687,7 @@ GameObject:
   - component: {fileID: 1744315968}
   - component: {fileID: 1744315970}
   - component: {fileID: 1744315971}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box
   m_TagString: Pressure
   m_Icon: {fileID: 0}
@@ -1099,5 +1100,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
