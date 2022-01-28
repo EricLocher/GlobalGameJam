@@ -14,6 +14,7 @@ public class FlippableObject : MonoBehaviour
         spr = GetComponent<SpriteRenderer>();
     }
 
+
     void Start()
     {
         if(dimension == FlipStates.Blue) 
