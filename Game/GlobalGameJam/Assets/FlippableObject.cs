@@ -23,29 +23,13 @@ public class FlippableObject : MonoBehaviour
         if(dimension == FlipStates.Blue) 
         { 
             spr.sprite = BlueSprite;
-            gameObject.layer = 7;
+            gameObject.layer = LayerMask.NameToLayer("Blue");
         }
         else if (dimension == FlipStates.Orange) 
         { 
             spr.sprite = OrangeSprite;
-            gameObject.layer = 8;
+            gameObject.layer = LayerMask.NameToLayer("Orange");
         }
 
-        
-
     }
-
-    void Update()
-    {
-        
-       
-        
-    }
-
-
-
-
-
-
-
 }
