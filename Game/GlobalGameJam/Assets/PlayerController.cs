@@ -89,6 +89,7 @@ public class PlayerController : MonoBehaviour
         {
             if(interactableObjects.Count < 1) { return; }
 
+            //BUBBLE SORT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DÅLIG ALGORITM JETEDÅLIG MEN OM DU BARA VILL HA DEN SOM ÄR STÖRST, JETEBRA
             float dist = Mathf.Abs((interactableObjects[0].transform.position - transform.position).sqrMagnitude);
             GameObject closestObject = interactableObjects[0];
 
@@ -118,6 +119,4 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.GetComponent<IInteractable>() != null)
             interactableObjects.Remove(collision.gameObject);
     }
-
-
 }
