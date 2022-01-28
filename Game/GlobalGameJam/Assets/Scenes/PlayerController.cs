@@ -10,7 +10,9 @@ public class PlayerController : MonoBehaviour
     float speed = 5;
     float jumpForce = 5;
 
-    public bool isGrounded = false;
+    bool isGrounded = false;
+    float coyoteTime = 0.1f;
+    float coyoteCounter;
 
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
@@ -23,7 +25,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Update()
-    {
+    {        
         Move();
         Jump();
         GroundChecker();
@@ -36,7 +38,10 @@ public class PlayerController : MonoBehaviour
     }
     void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (isGrounded) { coyoteCounter = coyoteTime; }
+        else { coyoteCounter -= Time.deltaTime; }
+
+        if (coyoteCounter >0f && Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
@@ -54,7 +59,6 @@ public class PlayerController : MonoBehaviour
     void GroundChecker()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 1, ignoreLayer);
-
 
         if (hit.collider != null)
         {
