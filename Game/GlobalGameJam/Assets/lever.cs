@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class lever : MonoBehaviour, IInteractable
+public class Lever : MonoBehaviour, IInteractable
 {
     [SerializeField] bool isToggled;
 
