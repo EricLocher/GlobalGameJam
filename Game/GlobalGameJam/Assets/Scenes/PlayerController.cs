@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody2D rb;
     float speed = 5;
-    float jumpForce = 5;
+    float jumpForce = 7;
 
     bool isGrounded = false;
     float coyoteTime = 0.1f;
