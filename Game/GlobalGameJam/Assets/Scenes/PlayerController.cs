@@ -17,12 +17,15 @@ public class PlayerController : MonoBehaviour
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
 
+    private SpriteRenderer mySpriteRenderer;
     [SerializeField] List<GameObject> interactableObjects = new List<GameObject>();
 
-
+    public bool flipX;
 
     private void Start()
-    { 
+    {
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
+
         ignoreLayer |= (1 << LayerMask.NameToLayer("Ground"));
         rb = GetComponent<Rigidbody2D>();
     }
@@ -40,6 +43,13 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float moveBy = x * speed;
         rb.velocity = new Vector2(moveBy, rb.velocity.y);
+
+        if (Input.GetAxisRaw("Horizontal") < 0)
+        {
+            mySpriteRenderer.flipX = true;
+        }
+        else
+            mySpriteRenderer.flipX = false;
     }
 
     void Jump()
