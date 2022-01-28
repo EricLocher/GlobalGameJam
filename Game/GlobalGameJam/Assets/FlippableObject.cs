@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FlippableObject : MonoBehaviour
 {
-    [SerializeField] Sprite BlueSprite, OrangeSprite;
     [SerializeField] FlipStates dimension = FlipStates.Blue;
 
     SpriteRenderer spr;
@@ -19,12 +18,12 @@ public class FlippableObject : MonoBehaviour
     {
         if(dimension == FlipStates.Blue) 
         { 
-            spr.sprite = BlueSprite;
+            spr.sprite = GameController.blueSprite;
             gameObject.layer = LayerMask.NameToLayer("Blue");
         }
         else if (dimension == FlipStates.Orange) 
         { 
-            spr.sprite = OrangeSprite;
+            spr.sprite = GameController.orangeSprite;
             gameObject.layer = LayerMask.NameToLayer("Orange");
         }
 

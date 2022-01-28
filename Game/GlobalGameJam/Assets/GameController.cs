@@ -5,16 +5,22 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
 
-
-
     static GameController _instance;
     public static GameController Instance { get { return _instance; } }
 
     public static FlipStates flipState = FlipStates.Orange;
 
+    [SerializeField] Sprite _blueSprite, _orangeSprite;
+    public static Sprite blueSprite, orangeSprite;
+
+
+
     private void Awake()
     {
-        if(_instance == null)
+        blueSprite = _blueSprite;
+        orangeSprite = _orangeSprite;
+
+        if (_instance == null)
         {
             _instance = this;
             DontDestroyOnLoad(gameObject);
