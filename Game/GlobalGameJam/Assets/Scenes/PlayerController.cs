@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody2D rb;
     float speed = 5;
-    float jumpForce = 5;
+    float jumpForce = 7;
 
     bool isGrounded = false;
     float coyoteTime = 0.1f;
@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
 
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
+
+    [SerializeField] List<GameObject> interactableObjects = new List<GameObject>();
+
 
 
     private void Start()
@@ -29,13 +32,16 @@ public class PlayerController : MonoBehaviour
         Move();
         Jump();
         GroundChecker();
+        Interact();
     }
+
     void Move()
     {
         float x = Input.GetAxisRaw("Horizontal");
         float moveBy = x * speed;
         rb.velocity = new Vector2(moveBy, rb.velocity.y);
     }
+
     void Jump()
     {
         if (isGrounded) { coyoteCounter = coyoteTime; }
@@ -67,4 +73,41 @@ public class PlayerController : MonoBehaviour
         else
             isGrounded = false;
     }
+    void Interact()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if(interactableObjects.Count < 1) { return; }
+
+            float dist = Mathf.Abs((interactableObjects[0].transform.position - transform.position).sqrMagnitude);
+            GameObject closestObject = interactableObjects[0];
+
+            foreach(GameObject _interactable in interactableObjects)
+            {
+                float _dist = Mathf.Abs((_interactable.transform.position - transform.position).sqrMagnitude);
+                if (dist >= _dist)
+                {
+                    dist = _dist;
+                    closestObject = _interactable;
+                }
+            }
+
+            closestObject.GetComponent<IInteractable>().interact();
+
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<IInteractable>() != null)
+            interactableObjects.Add(collision.gameObject);   
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<IInteractable>() != null)
+            interactableObjects.Remove(collision.gameObject);
+    }
+
+
 }

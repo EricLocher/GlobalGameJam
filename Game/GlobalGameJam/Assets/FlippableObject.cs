@@ -8,11 +8,13 @@ public class FlippableObject : MonoBehaviour
 
     SpriteRenderer spr;
 
+    
+
+
     void Awake()
     {
         spr = GetComponent<SpriteRenderer>();
     }
-
 
     void Start()
     {
@@ -27,5 +29,44 @@ public class FlippableObject : MonoBehaviour
             gameObject.layer = LayerMask.NameToLayer("Orange");
         }
 
+
+        UpdateSprite(GameController.flipState);
+
+        GameController.OnVariableChange += UpdateSprite;
+
+
     }
+
+
+    void UpdateSprite(FlipStates value)
+    {
+        Debug.Log(value);
+        if(dimension != value)
+        {
+            if(dimension == FlipStates.Blue)
+            {
+                spr.sprite = GameController.blueInactive;
+            }
+            else
+            {
+                spr.sprite = GameController.orangeInactive;
+            }
+        }
+        else
+        {
+            if (dimension == FlipStates.Blue)
+            {
+                spr.sprite = GameController.blueSprite;
+            }
+            else
+            {
+                spr.sprite = GameController.orangeSprite;
+            }
+        }
+
+
+
+    }
+
+
 }
