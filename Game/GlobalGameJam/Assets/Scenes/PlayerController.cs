@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] LayerMask ignoreLayer;
+    public static LayerMask ignoreLayer;
 
     Rigidbody2D rb;
     float speed = 5;
@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     { 
-
+        ignoreLayer |= (1 << LayerMask.NameToLayer("Ground"));
         rb = GetComponent<Rigidbody2D>();
     }
 
