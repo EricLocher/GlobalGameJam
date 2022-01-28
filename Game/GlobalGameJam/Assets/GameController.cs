@@ -17,7 +17,10 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
-        if(_instance == null)
+        blueSprite = _blueSprite;
+        orangeSprite = _orangeSprite;
+
+        if (_instance == null)
         {
             _instance = this;
             DontDestroyOnLoad(gameObject);
@@ -30,8 +33,6 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        blueSprite = _blueSprite;
-        orangeSprite = _orangeSprite;
         UpdateCollision();
     }
 

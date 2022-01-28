@@ -123,6 +123,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &678101455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 678101457}
+  - component: {fileID: 678101456}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &678101456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678101455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1e1daaf71c0d5645b5a8405737fe1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _blueSprite: {fileID: 21300000, guid: d38fd7fb0f324964daab340671a14967, type: 3}
+  _orangeSprite: {fileID: 21300000, guid: 63ac979b28e70c54cbe8aef805f9c60e, type: 3}
+--- !u!4 &678101457
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678101455}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.5619385, y: 0.83233345, z: -0.38306388}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &958869953
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,9 +309,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1862df437e3caa41b8a8193658dc361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreLayer:
-    serializedVersion: 2
-    m_Bits: 64
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
 --- !u!212 &1196305275
