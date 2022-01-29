@@ -31,15 +31,15 @@ public class movingPlatform : MonoBehaviour
             }
 
 
-            moveY = (moveDist * (Time.deltaTime * moveSpeed));
+            //moveY = (moveDist * (Time.deltaTime * moveSpeed));
 
-            if (!check)
-            {
-                moveY *= -1;
-            }
+            //if (!check)
+            //{
+            //    moveY *= -1;
+            //}
 
 
-            transform.position = new Vector2(transform.position.x, transform.position.y + moveY);
+            //transform.position = new Vector2(transform.position.x, transform.position.y + moveY);
 
 
         }
