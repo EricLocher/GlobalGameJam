@@ -13,7 +13,8 @@ public class GameController : MonoBehaviour
     public delegate void OnVariableChangeDelegate(FlipStates state);
     public static event OnVariableChangeDelegate OnVariableChange;
 
-    PlayerController playerController;
+    public static PlayerController playerController;
+
 
     public static void ChangeFlipState()
     {

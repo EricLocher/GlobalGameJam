@@ -45,7 +45,8 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         y = Input.GetAxisRaw("Vertical");
-        Debug.Log(y);
+
+
         if(Input.GetKeyDown(KeyCode.B))
         {
             animator.runtimeAnimatorController = blue;
@@ -59,6 +60,9 @@ public class PlayerController : MonoBehaviour
         Jump();
         GroundChecker();
         Interact();
+
+        if(transform.position.y < -10) { Level.ResetLevel(); }
+
     }
 
     void Push()
@@ -126,6 +130,25 @@ public class PlayerController : MonoBehaviour
         if (hit.collider != null)
         {
             isGrounded = true;
+
+            movingPlatform _movingPlatform = hit.collider.GetComponent<movingPlatform>();
+
+            if(_movingPlatform != null)
+            {
+
+                if(_movingPlatform.moveDir == movingPlatform.MoveDirections.Horizontal)
+                {
+                    transform.position += new Vector3(_movingPlatform.moveVel, 0, 0);
+                }
+                else
+                {
+                    transform.position += new Vector3(0, _movingPlatform.moveVel, 0);
+                }
+
+            }
+
+
+
         }
         else
             isGrounded = false;
@@ -174,13 +197,19 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<IInteractable>() != null)
-            interactableObjects.Add(collision.gameObject);   
+        if(collision.gameObject.GetComponent<IInteractable>() != null)
+            interactableObjects.Add(collision.gameObject);
+
+        if(collision.gameObject.GetComponent<IPickUp>() != null)
+        {
+            collision.gameObject.GetComponent<IPickUp>().PickUp();
+        }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<IInteractable>() != null)
+        if(collision.gameObject.GetComponent<IInteractable>() != null)
             interactableObjects.Remove(collision.gameObject);
     }
 }
