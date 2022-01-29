@@ -8,8 +8,7 @@ public class FlippableObject : MonoBehaviour
 
     SpriteRenderer spr;
 
-    
-
+    [SerializeField] Sprite blueSprite, orangeSprite, blueInactive, orangeInactive;
 
     void Awake()
     {
@@ -20,12 +19,12 @@ public class FlippableObject : MonoBehaviour
     {
         if(dimension == FlipStates.Blue) 
         { 
-            spr.sprite = GameController.blueSprite;
+            spr.sprite = blueSprite;
             gameObject.layer = LayerMask.NameToLayer("Blue");
         }
         else if (dimension == FlipStates.Orange) 
         { 
-            spr.sprite = GameController.orangeSprite;
+            spr.sprite = orangeSprite;
             gameObject.layer = LayerMask.NameToLayer("Orange");
         }
 
@@ -33,8 +32,6 @@ public class FlippableObject : MonoBehaviour
         UpdateSprite(GameController.flipState);
 
         GameController.OnVariableChange += UpdateSprite;
-
-
     }
 
 
@@ -44,22 +41,22 @@ public class FlippableObject : MonoBehaviour
         {
             if(dimension == FlipStates.Blue)
             {
-                spr.sprite = GameController.blueInactive;
+                spr.sprite = blueInactive;
             }
             else
             {
-                spr.sprite = GameController.orangeInactive;
+                spr.sprite = orangeInactive;
             }
         }
         else
         {
             if (dimension == FlipStates.Blue)
             {
-                spr.sprite = GameController.blueSprite;
+                spr.sprite = blueSprite;
             }
             else
             {
-                spr.sprite = GameController.orangeSprite;
+                spr.sprite = orangeSprite;
             }
         }
 

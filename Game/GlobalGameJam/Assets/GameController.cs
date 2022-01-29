@@ -8,9 +8,6 @@ public class GameController : MonoBehaviour
     static GameController _instance;
     public static GameController Instance { get { return _instance; } }
 
-    [SerializeField] Sprite _blueSprite, _orangeSprite, _blueInactive, _orangeInactive;
-    public static Sprite blueSprite, orangeSprite, blueInactive, orangeInactive;
-
     public static FlipStates flipState = FlipStates.Orange;
 
     public delegate void OnVariableChangeDelegate(FlipStates state);
@@ -27,11 +24,6 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
-
-        blueSprite = _blueSprite;
-        orangeSprite = _orangeSprite;
-        blueInactive = _blueInactive;
-        orangeInactive = _orangeInactive;
 
         if (_instance == null)
         {
