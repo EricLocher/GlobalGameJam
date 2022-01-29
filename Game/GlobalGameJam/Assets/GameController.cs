@@ -13,9 +13,14 @@ public class GameController : MonoBehaviour
     public delegate void OnVariableChangeDelegate(FlipStates state);
     public static event OnVariableChangeDelegate OnVariableChange;
 
+    PlayerController playerController;
+
     public static void ChangeFlipState()
     {
-        if(flipState == FlipStates.Orange) { flipState = FlipStates.Blue; }
+        if(flipState == FlipStates.Orange) 
+        { 
+            flipState = FlipStates.Blue;
+        }
         else { flipState = FlipStates.Orange; }
 
         OnVariableChange(flipState);
@@ -38,15 +43,29 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+
         UpdateCollision();
     }
 
     void Update()
     {
+        FlipStateCheck();
         if (Input.GetKeyDown(KeyCode.F))
-        {
-
+        {          
             FlipState();
+        }
+    }
+
+    void FlipStateCheck()
+    {
+        if(GameController.flipState == FlipStates.Orange)
+        {
+            playerController.animator.runtimeAnimatorController = playerController.orange;
+        }
+        else if(GameController.flipState == FlipStates.Blue)
+        {
+            playerController.animator.runtimeAnimatorController = playerController.blue;
         }
     }
 

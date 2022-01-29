@@ -20,9 +20,10 @@ public class PlayerController : MonoBehaviour
     public float lowJumpMultiplier = 2f;
 
     private SpriteRenderer mySpriteRenderer;
-    [SerializeField] RuntimeAnimatorController blue;
-    [SerializeField] RuntimeAnimatorController orange;
-    [SerializeField] Animator animator;
+
+    public RuntimeAnimatorController blue;
+    public RuntimeAnimatorController orange;
+    public Animator animator;
 
     [SerializeField] List<GameObject> interactableObjects = new List<GameObject>();
 
