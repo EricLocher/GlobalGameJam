@@ -10,11 +10,10 @@ public class Level : MonoBehaviour
     [SerializeField] int _amountOfFlips;
     public static int amountOfFlips;
     public static int score = 0;
+    public static int lives;
 
     void Awake()
     {
-        amountOfFlips = _amountOfFlips;
-
         if (_instance == null)
         {
             _instance = this;
@@ -24,6 +23,14 @@ public class Level : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    void Start()
+    {
+        amountOfFlips = _amountOfFlips;
+        lives = 3;
+        score = 0;
+    }
+
 
     public static void useFlip()
     {
@@ -39,7 +46,13 @@ public class Level : MonoBehaviour
     public static void ResetLevel()
     {
 
-        GameController.playerController.transform.position = SpawnPoint.pos;
+        if(lives <= 1)
+        {
+            LevelManager.RestartLevel();
+        }
+
+        lives--;
+        PlayerController.playerTransform.position = SpawnPoint.pos;
         
     }
 

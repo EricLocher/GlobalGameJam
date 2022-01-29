@@ -6,6 +6,9 @@ public class PlayerController : MonoBehaviour
 {
     public static LayerMask ignoreLayer;
 
+    static PlayerController _instance;
+    public static PlayerController Instance { get { return _instance; } }
+
     public Rigidbody2D rb;
     float speed = 5;
 
@@ -21,9 +24,10 @@ public class PlayerController : MonoBehaviour
 
     private SpriteRenderer mySpriteRenderer;
 
-    public RuntimeAnimatorController blue;
-    public RuntimeAnimatorController orange;
-    public Animator animator;
+    public static Transform playerTransform;
+    public static RuntimeAnimatorController blue;
+    public static RuntimeAnimatorController orange;
+    public static Animator animator;
 
     [SerializeField] List<GameObject> interactableObjects = new List<GameObject>();
 
@@ -31,10 +35,31 @@ public class PlayerController : MonoBehaviour
 
     bool isPushing;
 
-    private void Start()
+    private void Awake()
     {
+        if (_instance == null)
+        {
+            _instance = this;
+           
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    void Start()
+    {
+        Init();
+    }
+
+    public void Init()
+    {
+        playerTransform = transform;
         blue = Resources.Load<RuntimeAnimatorController>("blue");
         orange = Resources.Load<RuntimeAnimatorController>("orange");
+
+        animator = GetComponent<Animator>();
 
         mySpriteRenderer = GetComponent<SpriteRenderer>();
 
