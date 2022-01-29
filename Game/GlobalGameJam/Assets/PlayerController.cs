@@ -161,11 +161,9 @@ public class PlayerController : MonoBehaviour
             collision.gameObject.layer != LayerMask.NameToLayer("Ground") &&
             (Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0 ))
         {
-            Debug.Log("hallå?2");
             isPushing = true;
         }
         else { isPushing = false; }
-        Debug.Log(isPushing);
         animator.SetBool("isPushing", isPushing);
     }
     private void OnCollisionExit2D(Collision2D collision)
