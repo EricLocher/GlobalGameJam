@@ -22,12 +22,12 @@ public class Door : MonoBehaviour
         if(pressurePlate.isActive)
         {
             animator.SetBool("active", pressurePlate.isActive);
-            Debug.Log("true");
+           
         }
         else
         {
             animator.SetBool("active", pressurePlate.isActive);
-            Debug.Log("false");
+            
         }
     }
     
