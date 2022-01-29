@@ -24,6 +24,7 @@ public class GameController : MonoBehaviour
         else { flipState = FlipStates.Orange; }
 
         OnVariableChange(flipState);
+
     }
 
     private void Awake()
@@ -51,7 +52,7 @@ public class GameController : MonoBehaviour
     {
         FlipStateCheck();
         if (Input.GetKeyDown(KeyCode.F))
-        {
+        {          
             FlipState();
         }
     }
