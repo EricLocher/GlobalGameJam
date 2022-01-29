@@ -25,8 +25,6 @@ public class GameController : MonoBehaviour
 
     }
 
-
-
     private void Awake()
     {
 
@@ -55,16 +53,17 @@ public class GameController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
+
             FlipState();
-            Debug.Log(flipState);
         }
     }
 
     public static void FlipState()
     {
+        if (Level.amountOfFlips <= 0) { return; }
+        Level.useFlip();
 
         ChangeFlipState();
-
         UpdateCollision();
     }
 
