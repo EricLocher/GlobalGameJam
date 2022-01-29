@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         y = Input.GetAxisRaw("Vertical");
-
+        Debug.Log(y);
         if(Input.GetKeyDown(KeyCode.B))
         {
             animator.runtimeAnimatorController = blue;
@@ -126,17 +126,6 @@ public class PlayerController : MonoBehaviour
         if (hit.collider != null)
         {
             isGrounded = true;
-
-            movingPlatform _movingPlatform = hit.collider.gameObject.GetComponent<movingPlatform>();
-
-            if (_movingPlatform != null)
-            {
-                if(_movingPlatform.moveX > 0)
-                {
-                    transform.position += new Vector3(_movingPlatform.moveX, 0, 0);
-                }
-            }
-
         }
         else
             isGrounded = false;
