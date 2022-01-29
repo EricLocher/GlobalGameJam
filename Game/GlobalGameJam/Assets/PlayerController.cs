@@ -75,8 +75,6 @@ public class PlayerController : MonoBehaviour
         GroundChecker();
         Interact();
 
-        if(transform.position.y < -10) { Level.ResetLevel(); }
-
     }
 
     void Push()
