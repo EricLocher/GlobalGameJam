@@ -123,9 +123,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780508a5cd01969418b7f305790afd08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moving: 0
   moveDir: 0
   moveDist: 1
   moveSpeed: 0.5
+  offset: 0
+  moveVel: 0
 --- !u!114 &3080025711438747743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dimension: 0
-  blueSprite: {fileID: 21300000, guid: d38fd7fb0f324964daab340671a14967, type: 3}
-  orangeSprite: {fileID: 21300000, guid: 63ac979b28e70c54cbe8aef805f9c60e, type: 3}
+  blueSprite: {fileID: 21300000, guid: 2d3abd35b9074d9418264dfa659772a0, type: 3}
+  orangeSprite: {fileID: 21300000, guid: 2c7a54ff5b0ac584bbc37b231aed5f1d, type: 3}
   blueInactive: {fileID: 21300000, guid: c92992d5bdad4364e807a05cf647a1da, type: 3}
   orangeInactive: {fileID: 21300000, guid: 728cd72d35729f140b97fadc67e8906f, type: 3}
