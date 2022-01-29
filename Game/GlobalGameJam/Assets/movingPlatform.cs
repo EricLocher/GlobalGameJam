@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class movingPlatform : MonoBehaviour
 {
-
+    [SerializeField] bool moving;
     [SerializeField] MoveDirections moveDir = MoveDirections.Vertical;
     [SerializeField] float moveDist;
     [SerializeField] float moveSpeed;
+    [SerializeField] float offset;
 
     Vector2 startPos;
     bool check = false;
@@ -15,11 +16,13 @@ public class movingPlatform : MonoBehaviour
     void Start()
     {
         startPos = transform.position;
+        transform.position = new Vector2(transform.position.x, transform.position.y + offset);
     }
 
 
     void Update()
     {
+        if(!moving) { return; }
         
         if(moveDir == MoveDirections.Vertical)
         {
