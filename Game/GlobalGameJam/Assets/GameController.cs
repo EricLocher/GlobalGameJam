@@ -24,7 +24,6 @@ public class GameController : MonoBehaviour
         else { flipState = FlipStates.Orange; }
 
         OnVariableChange(flipState);
-
     }
 
     private void Awake()

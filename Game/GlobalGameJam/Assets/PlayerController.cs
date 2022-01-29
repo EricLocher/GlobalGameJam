@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         y = Input.GetAxisRaw("Vertical");
-        //Debug.Log(y);
+        Debug.Log(y);
         if(Input.GetKeyDown(KeyCode.B))
         {
             animator.runtimeAnimatorController = blue;
@@ -126,21 +126,6 @@ public class PlayerController : MonoBehaviour
         if (hit.collider != null)
         {
             isGrounded = true;
-
-            movingPlatform _movingPlatform = hit.collider.gameObject.GetComponent<movingPlatform>();
-
-            //if (_movingPlatform != null)
-            //{
-            //    if(_movingPlatform.moveX != 0)
-            //    {
-            //        transform.position += new Vector3(_movingPlatform.moveX, 0, 0);
-            //    }
-            //    else if(_movingPlatform.moveY != 0)
-            //    {
-            //        transform.position += new Vector3(0, _movingPlatform.moveY, 0);
-            //    }
-            //}
-
         }
         else
             isGrounded = false;
@@ -151,7 +136,7 @@ public class PlayerController : MonoBehaviour
         {
             if(interactableObjects.Count < 1) { return; }
 
-            //BUBBLE SORT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Dï¿½LIG ALGORITM JETEDï¿½LIG MEN OM DU BARA VILL HA DEN SOM ï¿½R STï¿½RST, JETEBRA
+            //BUBBLE SORT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DÅLIG ALGORITM JETEDÅLIG MEN OM DU BARA VILL HA DEN SOM ÄR STÖRST, JETEBRA
             float dist = Mathf.Abs((interactableObjects[0].transform.position - transform.position).sqrMagnitude);
             GameObject closestObject = interactableObjects[0];
 
@@ -176,11 +161,9 @@ public class PlayerController : MonoBehaviour
             collision.gameObject.layer != LayerMask.NameToLayer("Ground") &&
             (Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0 ))
         {
-            Debug.Log("hallï¿½?2");
             isPushing = true;
         }
         else { isPushing = false; }
-        Debug.Log(isPushing);
         animator.SetBool("isPushing", isPushing);
     }
     private void OnCollisionExit2D(Collision2D collision)
