@@ -7,6 +7,8 @@ public class PressurePlate : MonoBehaviour
     [SerializeField] Animator anim;
     public bool isActive = false;
 
+    List<GameObject> onPlate = new List<GameObject>();
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -26,6 +28,9 @@ public class PressurePlate : MonoBehaviour
         {
             isActive = true;
             anim.SetBool("active", isActive);
+
+            onPlate.Add(collision.gameObject);
+
         }
         /*else if (collision.gameObject.CompareTag("Player"))
         {
@@ -36,7 +41,16 @@ public class PressurePlate : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        isActive = false;
-        anim.SetBool("active", isActive);
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            onPlate.Remove(collision.gameObject);
+
+            if(onPlate.Count < 1)
+            {
+                isActive = false;
+            }
+
+            anim.SetBool("active", isActive);
+        }
     }
 }
