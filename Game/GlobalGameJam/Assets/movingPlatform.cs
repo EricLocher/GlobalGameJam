@@ -1,17 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class movingPlatform : MonoBehaviour
 {
     [SerializeField] bool moving;
-    [SerializeField] MoveDirections moveDir = MoveDirections.Vertical;
+    public MoveDirections moveDir = MoveDirections.Vertical;
     [SerializeField] float moveDist;
     [SerializeField] float moveSpeed;
     [SerializeField] float offset;
 
     Vector2 startPos;
     bool check = false;
+
+    public float moveVel;
 
     void Start()
     {
@@ -22,27 +22,20 @@ public class movingPlatform : MonoBehaviour
 
     void Update()
     {
-        if(!moving) { return; }
-        
-        if(moveDir == MoveDirections.Vertical)
+        if (!moving) { return; }
+
+        if (moveDir == MoveDirections.Vertical)
         {
-            if(Mathf.Abs(transform.position.y - startPos.y) >= moveDist)
+            if (Mathf.Abs(transform.position.y - startPos.y) >= moveDist)
             {
-                if(check) { check = false; }
+                if (check) { check = false; }
                 else { check = true; }
             }
 
-            float moveY = (moveDist * (Time.deltaTime * moveSpeed));
+            moveVel = (moveDist * (Time.deltaTime * moveSpeed));
 
-            if (check)
-            {
-                transform.position = new Vector2(transform.position.x, transform.position.y + moveY);
-            }
-            else
-            {
-                transform.position = new Vector2(transform.position.x, transform.position.y - moveY);
-            }
-
+            if (!check) { moveVel *= -1; }
+            transform.position = new Vector2(transform.position.x, transform.position.y + moveVel);
 
         }
         else
@@ -53,23 +46,17 @@ public class movingPlatform : MonoBehaviour
                 else { check = true; }
             }
 
-            float moveX = (moveDist * (Time.deltaTime * moveSpeed));
+            moveVel = (moveDist * (Time.deltaTime * moveSpeed));
 
-            if (check)
-            {
-                transform.position = new Vector2(transform.position.x + moveX, transform.position.y);
-            }
-            else
-            {
-                transform.position = new Vector2(transform.position.x - moveX, transform.position.y);
-            }
+            if (!check) { moveVel *= -1; }
+            transform.position = new Vector2(transform.position.x + moveVel, transform.position.y);
         }
-        
+
 
 
     }
 
-    enum MoveDirections
+    public enum MoveDirections
     {
         Vertical,
         Horizontal

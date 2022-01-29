@@ -9,7 +9,7 @@ public class Level : MonoBehaviour
 
     [SerializeField] int _amountOfFlips;
     public static int amountOfFlips;
-
+    public static int score = 0;
 
     void Awake()
     {
@@ -18,7 +18,6 @@ public class Level : MonoBehaviour
         if (_instance == null)
         {
             _instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -34,7 +33,15 @@ public class Level : MonoBehaviour
 
     public static void Win()
     {
-        //
+        //TODO Add Win state
     }
+
+    public static void ResetLevel()
+    {
+        //TODO Reset/Restart Level
+
+        
+    }
+
 
 }

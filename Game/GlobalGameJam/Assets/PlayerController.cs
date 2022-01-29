@@ -49,6 +49,9 @@ public class PlayerController : MonoBehaviour
         Jump();
         GroundChecker();
         Interact();
+
+        if(transform.position.y < -10) { Level.ResetLevel(); }
+
     }
 
     void Push()
@@ -116,6 +119,25 @@ public class PlayerController : MonoBehaviour
         if (hit.collider != null)
         {
             isGrounded = true;
+
+            movingPlatform _movingPlatform = hit.collider.GetComponent<movingPlatform>();
+
+            if(_movingPlatform != null)
+            {
+
+                if(_movingPlatform.moveDir == movingPlatform.MoveDirections.Horizontal)
+                {
+                    transform.position += new Vector3(_movingPlatform.moveVel, 0, 0);
+                }
+                else
+                {
+                    transform.position += new Vector3(0, _movingPlatform.moveVel, 0);
+                }
+
+            }
+
+
+
         }
         else
             isGrounded = false;
@@ -126,7 +148,7 @@ public class PlayerController : MonoBehaviour
         {
             if(interactableObjects.Count < 1) { return; }
 
-            //BUBBLE SORT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DÅLIG ALGORITM JETEDÅLIG MEN OM DU BARA VILL HA DEN SOM ÄR STÖRST, JETEBRA
+            //BUBBLE SORT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Dï¿½LIG ALGORITM JETEDï¿½LIG MEN OM DU BARA VILL HA DEN SOM ï¿½R STï¿½RST, JETEBRA
             float dist = Mathf.Abs((interactableObjects[0].transform.position - transform.position).sqrMagnitude);
             GameObject closestObject = interactableObjects[0];
 
@@ -164,13 +186,19 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<IInteractable>() != null)
-            interactableObjects.Add(collision.gameObject);   
+        if(collision.gameObject.GetComponent<IInteractable>() != null)
+            interactableObjects.Add(collision.gameObject);
+
+        if(collision.gameObject.GetComponent<IPickUp>() != null)
+        {
+            collision.gameObject.GetComponent<IPickUp>().PickUp();
+        }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<IInteractable>() != null)
+        if(collision.gameObject.GetComponent<IInteractable>() != null)
             interactableObjects.Remove(collision.gameObject);
     }
 }
