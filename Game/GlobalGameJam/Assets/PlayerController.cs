@@ -8,22 +8,33 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody2D rb;
     float speed = 5;
-    float jumpForce = 7;
 
+    float jumpForce = 7;
     bool isGrounded = false;
     float coyoteTime = 0.1f;
     float coyoteCounter;
+    float x;
+    float y;
 
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
 
     private SpriteRenderer mySpriteRenderer;
+    [SerializeField] RuntimeAnimatorController blue;
+    [SerializeField] RuntimeAnimatorController orange;
+    [SerializeField] Animator animator;
+
     [SerializeField] List<GameObject> interactableObjects = new List<GameObject>();
 
     public bool flipX;
 
+    bool isPushing;
+
     private void Start()
     {
+        blue = Resources.Load<RuntimeAnimatorController>("blue");
+        orange = Resources.Load<RuntimeAnimatorController>("orange");
+
         mySpriteRenderer = GetComponent<SpriteRenderer>();
 
         ignoreLayer |= (1 << LayerMask.NameToLayer("Ground"));
@@ -31,16 +42,38 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Update()
-    {        
+    {
+        y = Input.GetAxisRaw("Vertical");
+        Debug.Log(y);
+        if(Input.GetKeyDown(KeyCode.B))
+        {
+            animator.runtimeAnimatorController = blue;
+        }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            animator.runtimeAnimatorController = orange;
+        }
         Move();
+        Push();
         Jump();
         GroundChecker();
         Interact();
     }
 
+    void Push()
+    {
+        if (isPushing == true && Mathf.Abs(x) < 1)
+        {
+            isPushing = false;
+            animator.SetBool("isPushing", isPushing);
+        }
+    }
+
     void Move()
     {
-        float x = Input.GetAxisRaw("Horizontal");
+        x = Input.GetAxisRaw("Horizontal");
+        animator.SetFloat("walkForce", Mathf.Abs(x));
+
         float moveBy = x * speed;
         rb.velocity = new Vector2(moveBy, rb.velocity.y);
 
@@ -54,8 +87,14 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if (isGrounded) { coyoteCounter = coyoteTime; }
-        else { coyoteCounter -= Time.deltaTime; }
+        if (isGrounded) 
+        { 
+            coyoteCounter = coyoteTime;          
+        }
+        else 
+        { 
+            coyoteCounter -= Time.deltaTime;                      
+        }
 
         if (coyoteCounter >0f && Input.GetKeyDown(KeyCode.Space))
         {
@@ -70,6 +109,13 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity += Vector2.up * Physics2D.gravity * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
+
+        if (rb.velocity.y > 0)
+        {
+            animator.SetBool("isJumping", true);
+        }
+        else
+            animator.SetBool("isJumping", false);
     }
 
     void GroundChecker()
@@ -106,6 +152,25 @@ public class PlayerController : MonoBehaviour
             closestObject.GetComponent<IInteractable>().interact();
 
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Box") && 
+            collision.gameObject.layer != LayerMask.NameToLayer("Ground") &&
+            (Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0 ))
+        {
+            Debug.Log("hallå?2");
+            isPushing = true;
+        }
+        else { isPushing = false; }
+        Debug.Log(isPushing);
+        animator.SetBool("isPushing", isPushing);
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        isPushing = false;
+        animator.SetBool("isPushing", isPushing);
     }
 
     void OnTriggerEnter2D(Collider2D collision)

@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: 51b46ff2d533b7d438ce71cf9d20e0f1
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4610864571113605326
+    second: Blue_ghost_walk_0
+  - first:
+      213: -1937061518587493911
+    second: Blue_ghost_walk_1
+  - first:
+      213: 3285483873660967792
+    second: Blue_ghost_walk_2
+  - first:
+      213: 1165292531086910471
+    second: Blue_ghost_walk_3
+  - first:
+      213: 3360171661980990955
+    second: Blue_ghost_walk_4
+  - first:
+      213: 7375629439703709944
+    second: Blue_ghost_walk_5
+  - first:
+      213: -1022812197968660389
+    second: Blue_ghost_walk_6
+  - first:
+      213: 6469968154563379909
+    second: Blue_ghost_walk_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +65,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -101,7 +125,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Blue_ghost_walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec809a4e5e41dff30800000000000000
+      internalID: 4610864571113605326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_ghost_walk_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e18384dfcc2e15e0800000000000000
+      internalID: -1937061518587493911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_ghost_walk_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b16d40d22689d20800000000000000
+      internalID: 3285483873660967792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_ghost_walk_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 704e9de0263fb2010800000000000000
+      internalID: 1165292531086910471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_ghost_walk_4
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bedf5b8d25ab1ae20800000000000000
+      internalID: 3360171661980990955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_ghost_walk_5
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 0
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f8f37cc5ef7b5660800000000000000
+      internalID: 7375629439703709944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_ghost_walk_6
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58342c99bd3ec1f0800000000000000
+      internalID: -1022812197968660389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_ghost_walk_7
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 0
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c207d8d1c1f9c950800000000000000
+      internalID: 6469968154563379909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
