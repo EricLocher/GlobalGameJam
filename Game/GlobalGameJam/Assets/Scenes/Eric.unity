@@ -859,6 +859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1862df437e3caa41b8a8193658dc361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
   blue: {fileID: 0}
@@ -1343,6 +1344,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1728875847}
+  - component: {fileID: 1728875848}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -1364,6 +1366,18 @@ Transform:
   m_Father: {fileID: 1991621440}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1728875848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728875846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f068c0e10c5f1d84d83d9f28bbfdb5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1744315967
 GameObject:
   m_ObjectHideFlags: 0

@@ -38,8 +38,8 @@ public class Level : MonoBehaviour
 
     public static void ResetLevel()
     {
-        //TODO Reset/Restart Level
 
+        GameController.playerController.transform.position = SpawnPoint.pos;
         
     }
 
