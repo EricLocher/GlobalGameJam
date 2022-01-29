@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         y = Input.GetAxisRaw("Vertical");
-        Debug.Log(y);
+        //Debug.Log(y);
         if(Input.GetKeyDown(KeyCode.B))
         {
             animator.runtimeAnimatorController = blue;
@@ -129,17 +129,17 @@ public class PlayerController : MonoBehaviour
 
             movingPlatform _movingPlatform = hit.collider.gameObject.GetComponent<movingPlatform>();
 
-            if (_movingPlatform != null)
-            {
-                if(_movingPlatform.moveX != 0)
-                {
-                    transform.position += new Vector3(_movingPlatform.moveX, 0, 0);
-                }
-                else if(_movingPlatform.moveY != 0)
-                {
-                    transform.position += new Vector3(0, _movingPlatform.moveY, 0);
-                }
-            }
+            //if (_movingPlatform != null)
+            //{
+            //    if(_movingPlatform.moveX != 0)
+            //    {
+            //        transform.position += new Vector3(_movingPlatform.moveX, 0, 0);
+            //    }
+            //    else if(_movingPlatform.moveY != 0)
+            //    {
+            //        transform.position += new Vector3(0, _movingPlatform.moveY, 0);
+            //    }
+            //}
 
         }
         else
