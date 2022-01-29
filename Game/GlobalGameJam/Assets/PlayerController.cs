@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public static LayerMask ignoreLayer;
 
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
     float speed = 5;
 
     float jumpForce = 7;
@@ -43,18 +43,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Update()
-    {
-        y = Input.GetAxisRaw("Vertical");
-
-
-        if(Input.GetKeyDown(KeyCode.B))
-        {
-            animator.runtimeAnimatorController = blue;
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            animator.runtimeAnimatorController = orange;
-        }
+    {     
         Move();
         Push();
         Jump();
@@ -159,7 +148,7 @@ public class PlayerController : MonoBehaviour
         {
             if(interactableObjects.Count < 1) { return; }
 
-            //BUBBLE SORT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DÅLIG ALGORITM JETEDÅLIG MEN OM DU BARA VILL HA DEN SOM ÄR STÖRST, JETEBRA
+            //BUBBLE SORT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Dï¿½LIG ALGORITM JETEDï¿½LIG MEN OM DU BARA VILL HA DEN SOM ï¿½R STï¿½RST, JETEBRA
             float dist = Mathf.Abs((interactableObjects[0].transform.position - transform.position).sqrMagnitude);
             GameObject closestObject = interactableObjects[0];
 

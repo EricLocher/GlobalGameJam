@@ -1,37 +1,37 @@
 fileFormatVersion: 2
-guid: 8b3f3ea50439faf4687994392a1ad67d
+guid: 01c938971e6269c43b947f864530165e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6311207267349916642
-    second: Blue_ghost_jump_0
+      213: -3992641436375365652
+    second: Orange_ghost_jump_0
   - first:
-      213: 6151226953811890163
-    second: Blue_ghost_jump_1
+      213: 3996403806118285511
+    second: Orange_ghost_jump_1
   - first:
-      213: 8408366831116276675
-    second: Blue_ghost_jump_2
+      213: 7965924092376379044
+    second: Orange_ghost_jump_2
   - first:
-      213: -4937228928263075521
-    second: Blue_ghost_jump_3
+      213: -884999309127915501
+    second: Orange_ghost_jump_3
   - first:
-      213: 5134149775862727317
-    second: Blue_ghost_jump_4
+      213: -1214626103826611847
+    second: Orange_ghost_jump_4
   - first:
-      213: -8785917764512422238
-    second: Blue_ghost_jump_5
+      213: 6964982453409970240
+    second: Orange_ghost_jump_5
   - first:
-      213: -4276685928363031861
-    second: Blue_ghost_jump_6
+      213: -5220156917018043710
+    second: Orange_ghost_jump_6
   - first:
-      213: 1043768570184792426
-    second: Blue_ghost_jump_7
+      213: 3632442870014765376
+    second: Orange_ghost_jump_7
   - first:
-      213: -8740226119690398789
-    second: Blue_ghost_jump_8
+      213: -5235396066177583214
+    second: Orange_ghost_jump_8
   - first:
-      213: 5168387281899304537
-    second: Blue_ghost_jump_9
+      213: 4817124448278190433
+    second: Orange_ghost_jump_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -133,13 +133,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Blue_ghost_jump_0
+      name: Orange_ghost_jump_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
-        height: 52
+        height: 67
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e149eb5bd661a68a0800000000000000
-      internalID: -6311207267349916642
+      spriteID: ce7475d74c94798c0800000000000000
+      internalID: -3992641436375365652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue_ghost_jump_1
+      name: Orange_ghost_jump_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 32
-        height: 52
+        height: 67
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ff04cae25c8d5550800000000000000
-      internalID: 6151226953811890163
+      spriteID: 7c013ba7614167730800000000000000
+      internalID: 3996403806118285511
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue_ghost_jump_2
+      name: Orange_ghost_jump_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 32
-        height: 52
+        height: 67
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,20 +189,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c3dcdd551580b470800000000000000
-      internalID: 8408366831116276675
+      spriteID: 4aee1d9b1c5ac8e60800000000000000
+      internalID: 7965924092376379044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue_ghost_jump_3
+      name: Orange_ghost_jump_3
       rect:
         serializedVersion: 2
         x: 96
         y: 0
         width: 32
-        height: 52
+        height: 67
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,20 +210,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f39c814c2707b7bb0800000000000000
-      internalID: -4937228928263075521
+      spriteID: 318e6f831d9d7b3f0800000000000000
+      internalID: -884999309127915501
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue_ghost_jump_4
+      name: Orange_ghost_jump_4
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 32
-        height: 52
+        height: 67
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,20 +231,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59203fde40a204740800000000000000
-      internalID: 5134149775862727317
+      spriteID: 9718f727ef7c42fe0800000000000000
+      internalID: -1214626103826611847
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue_ghost_jump_5
+      name: Orange_ghost_jump_5
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 32
-        height: 52
+        height: 67
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,20 +252,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a6617cc756221680800000000000000
-      internalID: -8785917764512422238
+      spriteID: 048745aa3a698a060800000000000000
+      internalID: 6964982453409970240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue_ghost_jump_6
+      name: Orange_ghost_jump_6
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 32
-        height: 52
+        height: 67
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,20 +273,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc282089ec826a4c0800000000000000
-      internalID: -4276685928363031861
+      spriteID: 2ca575901f64e87b0800000000000000
+      internalID: -5220156917018043710
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue_ghost_jump_7
+      name: Orange_ghost_jump_7
       rect:
         serializedVersion: 2
         x: 224
         y: 0
         width: 32
-        height: 52
+        height: 67
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,20 +294,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a69f4950cf53c7e00800000000000000
-      internalID: 1043768570184792426
+      spriteID: 04961267b87096230800000000000000
+      internalID: 3632442870014765376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue_ghost_jump_8
+      name: Orange_ghost_jump_8
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 32
-        height: 52
+        height: 67
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,20 +315,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb3534fd6aa74b680800000000000000
-      internalID: -8740226119690398789
+      spriteID: 297f10124032857b0800000000000000
+      internalID: -5235396066177583214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue_ghost_jump_9
+      name: Orange_ghost_jump_9
       rect:
         serializedVersion: 2
         x: 288
         y: 0
         width: 32
-        height: 52
+        height: 67
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,8 +336,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 956314f79dcc9b740800000000000000
-      internalID: 5168387281899304537
+      spriteID: 169987ad92dd9d240800000000000000
+      internalID: 4817124448278190433
       vertices: []
       indices: 
       edges: []
