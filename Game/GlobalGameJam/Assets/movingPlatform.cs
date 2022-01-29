@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class movingPlatform : MonoBehaviour
@@ -20,26 +22,26 @@ public class movingPlatform : MonoBehaviour
 
     void Update()
     {
-        if (!moving) { return; }
-
-        if (moveDir == MoveDirections.Vertical)
+        if(!moving) { return; }
+        
+        if(moveDir == MoveDirections.Vertical)
         {
-            if (Mathf.Abs(transform.position.y - startPos.y) >= moveDist)
+            if(Mathf.Abs(transform.position.y - startPos.y) >= moveDist)
             {
-                if (check) { check = false; }
+                if(check) { check = false; }
                 else { check = true; }
             }
 
+            float moveY = (moveDist * (Time.deltaTime * moveSpeed));
 
-            //moveY = (moveDist * (Time.deltaTime * moveSpeed));
-
-            //if (!check)
-            //{
-            //    moveY *= -1;
-            //}
-
-
-            //transform.position = new Vector2(transform.position.x, transform.position.y + moveY);
+            if (check)
+            {
+                transform.position = new Vector2(transform.position.x, transform.position.y + moveY);
+            }
+            else
+            {
+                transform.position = new Vector2(transform.position.x, transform.position.y - moveY);
+            }
 
 
         }
@@ -53,14 +55,16 @@ public class movingPlatform : MonoBehaviour
 
             float moveX = (moveDist * (Time.deltaTime * moveSpeed));
 
-            if (!check)
+            if (check)
             {
-                moveX *= -1;
+                transform.position = new Vector2(transform.position.x + moveX, transform.position.y);
             }
-
-            transform.position = new Vector2(transform.position.x + moveX, transform.position.y);
+            else
+            {
+                transform.position = new Vector2(transform.position.x - moveX, transform.position.y);
+            }
         }
-
+        
 
 
     }
