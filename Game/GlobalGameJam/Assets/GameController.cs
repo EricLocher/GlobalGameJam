@@ -48,7 +48,7 @@ public class GameController : MonoBehaviour
     void Update()
     {
         FlipStateCheck();
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.Space))
         {          
             FlipState();
         }

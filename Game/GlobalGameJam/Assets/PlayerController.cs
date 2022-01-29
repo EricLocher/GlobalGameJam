@@ -12,9 +12,9 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     float speed = 5;
 
-    float jumpForce = 7;
+    float jumpForce = 8;
     bool isGrounded = false;
-    float coyoteTime = 0.1f;
+    float coyoteTime = 0.2f;
     float coyoteCounter;
     float x;
     float y;
@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour
             coyoteCounter -= Time.deltaTime;                      
         }
 
-        if (coyoteCounter >0f && Input.GetKeyDown(KeyCode.Space))
+        if (coyoteCounter >0f && Input.GetKeyDown(KeyCode.W))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity += Vector2.up * Physics2D.gravity * (fallMultiplier - 1) * Time.deltaTime;
         }
-        else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.Space))
+        else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.W))
         {
             rb.velocity += Vector2.up * Physics2D.gravity * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
