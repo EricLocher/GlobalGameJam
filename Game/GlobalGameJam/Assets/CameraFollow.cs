@@ -3,12 +3,15 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
 
-    public Transform target;
+    Transform target;
     public float lerpSpeed = 0.125f;
     public bool followTarget = true;
 
     void FixedUpdate()
     {
+
+        if(target == null) { target = PlayerController.playerTransform; }
+
         if (followTarget == true)
         {
             Vector3 targetPos = new Vector3(target.position.x, target.position.y, -10);

@@ -33,7 +33,6 @@ public class GameController : MonoBehaviour
         if (_instance == null)
         {
             _instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -43,9 +42,7 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-
-        UpdateCollision();
+        Init();
     }
 
     void Update()
@@ -57,15 +54,20 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public static void Init()
+    {
+        UpdateCollision();
+    }
+
     void FlipStateCheck()
     {
         if(GameController.flipState == FlipStates.Orange)
         {
-            playerController.animator.runtimeAnimatorController = playerController.orange;
+            PlayerController.animator.runtimeAnimatorController = PlayerController.orange;
         }
         else if(GameController.flipState == FlipStates.Blue)
         {
-            playerController.animator.runtimeAnimatorController = playerController.blue;
+            PlayerController.animator.runtimeAnimatorController = PlayerController.blue;
         }
     }
 
