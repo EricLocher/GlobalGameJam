@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public static LayerMask ignoreLayer;
 
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
     float speed = 5;
 
     float jumpForce = 7;
@@ -43,17 +43,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Update()
-    {
-        y = Input.GetAxisRaw("Vertical");
-        Debug.Log(y);
-        if(Input.GetKeyDown(KeyCode.B))
-        {
-            animator.runtimeAnimatorController = blue;
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            animator.runtimeAnimatorController = orange;
-        }
+    {     
         Move();
         Push();
         Jump();
