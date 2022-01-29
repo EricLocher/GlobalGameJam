@@ -131,9 +131,13 @@ public class PlayerController : MonoBehaviour
 
             if (_movingPlatform != null)
             {
-                if(_movingPlatform.moveX > 0)
+                if(_movingPlatform.moveX != 0)
                 {
                     transform.position += new Vector3(_movingPlatform.moveX, 0, 0);
+                }
+                else if(_movingPlatform.moveY != 0)
+                {
+                    transform.position += new Vector3(0, _movingPlatform.moveY, 0);
                 }
             }
 
