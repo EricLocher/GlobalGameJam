@@ -13,6 +13,8 @@ public class movingPlatform : MonoBehaviour
     Vector2 startPos;
     bool check = false;
 
+    public float moveX, moveY;
+
     void Start()
     {
         startPos = transform.position;
@@ -32,7 +34,7 @@ public class movingPlatform : MonoBehaviour
                 else { check = true; }
             }
 
-            float moveY = (moveDist * (Time.deltaTime * moveSpeed));
+            moveY = (moveDist * (Time.deltaTime * moveSpeed));
 
             if (check)
             {
@@ -53,7 +55,7 @@ public class movingPlatform : MonoBehaviour
                 else { check = true; }
             }
 
-            float moveX = (moveDist * (Time.deltaTime * moveSpeed));
+            moveX = (moveDist * (Time.deltaTime * moveSpeed));
 
             if (check)
             {
