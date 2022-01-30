@@ -11,7 +11,7 @@ public class movingPlatform : MonoBehaviour
     [SerializeField] SpriteRenderer spriteRenderer;
 
     Vector2 startPos;
-    bool check = false;
+    bool checkMax = true, checkMin = false;
 
     public float moveVel;
 
@@ -19,7 +19,11 @@ public class movingPlatform : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         startPos = transform.position;
-        transform.position = new Vector2(transform.position.x, transform.position.y + offset);
+
+        if(moveDir == MoveDirections.Vertical)
+            transform.position = new Vector2(transform.position.x, transform.position.y + offset);
+        else
+            transform.position = new Vector2(transform.position.x + offset, transform.position.y);
     }
 
 
@@ -29,29 +33,43 @@ public class movingPlatform : MonoBehaviour
 
         if (moveDir == MoveDirections.Vertical)
         {
-            if (Mathf.Abs(transform.position.y - startPos.y) >= moveDist)
+            if (transform.position.y >= startPos.y + moveDist)
             {
-                if (check) { check = false; }
-                else { check = true; }
+                checkMax = true;
+                checkMin = false;
+            } else if (transform.position.y <= startPos.y - moveDist)
+            {
+                checkMax = false;
+                checkMin = true;
             }
 
-            moveVel = (moveDist * (Time.deltaTime * moveSpeed));
+            if(checkMax)
+                moveVel = (moveDist * (Time.deltaTime * moveSpeed)) * -1;
+            else if(checkMin)
+                moveVel = (moveDist * (Time.deltaTime * moveSpeed));
 
-            if (!check) { moveVel *= -1; }
+
             transform.position = new Vector2(transform.position.x, transform.position.y + moveVel);
 
         }
         else
         {
-            if (Mathf.Abs(transform.position.x - startPos.x) >= moveDist)
+            if (transform.position.x >= startPos.x + moveDist)
             {
-                if (check) { check = false; }
-                else { check = true; }
+                checkMax = true;
+                checkMin = false;
+            }
+            else if (transform.position.x <= startPos.x - moveDist)
+            {
+                checkMax = false;
+                checkMin = true;
             }
 
-            moveVel = (moveDist * (Time.deltaTime * moveSpeed));
+            if (checkMax)
+                moveVel = (moveDist * (Time.deltaTime * moveSpeed)) * -1;
+            else if (checkMin)
+                moveVel = (moveDist * (Time.deltaTime * moveSpeed));
 
-            if (!check) { moveVel *= -1; }
             transform.position = new Vector2(transform.position.x + moveVel, transform.position.y);
         }
     }
@@ -76,12 +94,23 @@ public class movingPlatform : MonoBehaviour
         {
             Gizmos.DrawLine(_tempPos, new Vector2(_tempPos.x, _tempPos.y + moveDist));
             Gizmos.DrawLine(_tempPos, new Vector2(_tempPos.x, _tempPos.y - moveDist));
+
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(new Vector2(_tempPos.x, _tempPos.y + offset), 0.3f);
+
+
         }
         else
         {
             Gizmos.DrawLine(_tempPos, new Vector2(_tempPos.x + moveDist + spriteRenderer.size.x/2, _tempPos.y));
             Gizmos.DrawLine(_tempPos, new Vector2(_tempPos.x - moveDist - spriteRenderer.size.x/2, _tempPos.y));
+
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(new Vector2(_tempPos.x + offset, _tempPos.y), 0.3f);
         }
+
+
+
 
     }
 
