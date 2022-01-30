@@ -8,6 +8,6 @@ public class WinMenu : MonoBehaviour
 {
     void Restart()
     {
-        scenema
+     
     }
 }

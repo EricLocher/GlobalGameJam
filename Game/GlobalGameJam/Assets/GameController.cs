@@ -75,7 +75,6 @@ public class GameController : MonoBehaviour
 
     public static void FlipState()
     {
-        if (Level.amountOfFlips <= 0) { return; }
         Level.useFlip();
 
         ChangeFlipState();

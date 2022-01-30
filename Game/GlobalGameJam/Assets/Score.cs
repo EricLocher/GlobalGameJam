@@ -10,6 +10,6 @@ public class Score : MonoBehaviour
 
     void Update()
     {
-        text.text = "Score : " + Level.score * 100; 
+        text.text = ""+ Level.score * 100; 
     }
 }

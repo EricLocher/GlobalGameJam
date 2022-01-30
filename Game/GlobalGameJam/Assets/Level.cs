@@ -7,8 +7,6 @@ public class Level : MonoBehaviour
     static Level _instance;
     public static Level Instance { get { return _instance; } }
 
-    [SerializeField] int _amountOfFlips;
-    public static int amountOfFlips;
     public static int score = 0;
     public static int lives;
 
@@ -26,7 +24,6 @@ public class Level : MonoBehaviour
 
     void Start()
     {
-        amountOfFlips = _amountOfFlips;
         lives = 3;
         score = 0;
     }
@@ -34,7 +31,6 @@ public class Level : MonoBehaviour
 
     public static void useFlip()
     {
-        amountOfFlips--;
         //TODO If flips == 0 end level etc....
     }
 
