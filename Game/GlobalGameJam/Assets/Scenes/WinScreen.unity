@@ -295,7 +295,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: P LAY
+  m_text: M AI N  M E N U
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac10257c729039041a8655639be825be, type: 2}
   m_sharedMaterial: {fileID: -9077371782415601571, guid: ac10257c729039041a8655639be825be, type: 2}
@@ -455,9 +455,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: Play
+      - m_Target: {fileID: 1391353132}
+        m_TargetAssemblyTypeName: WinMenu, Assembly-CSharp
+        m_MethodName: Menu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

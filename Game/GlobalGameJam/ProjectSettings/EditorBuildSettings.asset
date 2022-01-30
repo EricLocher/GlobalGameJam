@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 8cb88c22b44abdb40bd1bf1751122b16
+  - enabled: 1
+    path: Assets/Scenes/Amelie.unity
+    guid: f5e18e634620da147ae0eaf7a26dd377
+  - enabled: 1
+    path: Assets/Scenes/Amelie 2.unity
+    guid: e889067a3213a274aafd33d8b8f0c095
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: 909add48b805b274f9ce5d192be70d66
   m_configObjects: {}
