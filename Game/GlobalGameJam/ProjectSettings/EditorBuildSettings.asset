@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Amelie 2.unity
     guid: e889067a3213a274aafd33d8b8f0c095
   - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: 22d319a74e343a546979a74bff509d38
+  - enabled: 1
     path: Assets/Scenes/WinScreen.unity
     guid: 909add48b805b274f9ce5d192be70d66
   m_configObjects: {}
