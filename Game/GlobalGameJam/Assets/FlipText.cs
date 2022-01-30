@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class FlipText : MonoBehaviour
 {
-    [SerializeField] Text text;
+    [SerializeField] TextMeshProUGUI text;
 
 
     void Update()
