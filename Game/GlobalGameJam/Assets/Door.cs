@@ -7,7 +7,6 @@ public class Door : MonoBehaviour
     [SerializeField] GameObject key;
     PressurePlate pressurePlate;
     Animator animator;
-
     private void Start()
     {
         pressurePlate = key.GetComponent<PressurePlate>();
