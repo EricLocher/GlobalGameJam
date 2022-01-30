@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     float speed = 5;
 
     float jumpForce = 8;
+    private bool isLanding;
+
     bool isGrounded = false;
     float coyoteTime = 0.2f;
     float coyoteCounter;
@@ -68,12 +70,15 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Update()
-    {     
+    {
+        isLanding = false;
+        animator.SetBool("isLanding", isLanding);
         Move();
         Push();
         Jump();
         GroundChecker();
         Interact();
+        
 
     }
 
@@ -98,8 +103,10 @@ public class PlayerController : MonoBehaviour
         {
             mySpriteRenderer.flipX = true;
         }
-        else
+        else if (Input.GetAxisRaw("Horizontal") > 0)
+        {
             mySpriteRenderer.flipX = false;
+        }
     }
 
     void Jump()
@@ -141,8 +148,14 @@ public class PlayerController : MonoBehaviour
 
         if (hit.collider != null)
         {
-            isGrounded = true;
+            if (!isGrounded)
+            {
+                isLanding = true;
+                animator.SetBool("isLanding", isLanding);
+            }
 
+            isGrounded = true;
+            
             movingPlatform _movingPlatform = hit.collider.GetComponent<movingPlatform>();
 
             if(_movingPlatform != null)
@@ -158,9 +171,6 @@ public class PlayerController : MonoBehaviour
                 }
 
             }
-
-
-
         }
         else
             isGrounded = false;

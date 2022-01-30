@@ -1,25 +1,22 @@
 fileFormatVersion: 2
-guid: 09db54871d4ad9843ad633b087950800
+guid: 19cd2d033ff3fa84a9e7f8bc70822562
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8145164153467710100
-    second: Blue_ghost_push_0
+      213: -3448120935943364757
+    second: Checkpoint_0
   - first:
-      213: -4961087364306042450
-    second: Blue_ghost_push_1
+      213: 3301549609868922437
+    second: Checkpoint_1
   - first:
-      213: 3176041680577495490
-    second: Blue_ghost_push_2
+      213: 596405922659037225
+    second: Checkpoint_2
   - first:
-      213: -3521498881861534561
-    second: Blue_ghost_push_3
+      213: 5240123770684355362
+    second: Checkpoint_3
   - first:
-      213: 2501666231002558597
-    second: Blue_ghost_push_4
-  - first:
-      213: -4928528076117731911
-    second: Blue_ghost_push_5
+      213: -206266764050003113
+    second: Checkpoint_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -64,7 +61,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 34
+  spritePixelsToUnits: 23
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,13 +118,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Blue_ghost_push_0
+      name: Checkpoint_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 34
-        height: 34
+        width: 23
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49a20b484af690170800000000000000
-      internalID: 8145164153467710100
+      spriteID: b6f12861740d520d0800000000000000
+      internalID: -3448120935943364757
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue_ghost_push_1
+      name: Checkpoint_1
       rect:
         serializedVersion: 2
-        x: 34
+        x: 23
         y: 0
-        width: 34
-        height: 34
+        width: 23
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea10cdeb35da62bb0800000000000000
-      internalID: -4961087364306042450
+      spriteID: 54e0198b0e571dd20800000000000000
+      internalID: 3301549609868922437
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue_ghost_push_2
+      name: Checkpoint_2
       rect:
         serializedVersion: 2
-        x: 68
+        x: 46
         y: 0
-        width: 34
-        height: 34
+        width: 23
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c108a2c411931c20800000000000000
-      internalID: 3176041680577495490
+      spriteID: 920f70ad60cd64800800000000000000
+      internalID: 596405922659037225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue_ghost_push_3
+      name: Checkpoint_3
       rect:
         serializedVersion: 2
-        x: 102
+        x: 69
         y: 0
-        width: 34
-        height: 34
+        width: 23
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9c35b5bc6f112fc0800000000000000
-      internalID: -3521498881861534561
+      spriteID: 223b8ba5ec8a8b840800000000000000
+      internalID: 5240123770684355362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue_ghost_push_4
+      name: Checkpoint_4
       rect:
         serializedVersion: 2
-        x: 136
+        x: 92
         y: 0
-        width: 34
-        height: 34
+        width: 23
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,29 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5807f75ce24b7b220800000000000000
-      internalID: 2501666231002558597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blue_ghost_push_5
-      rect:
-        serializedVersion: 2
-        x: 170
-        y: 0
-        width: 34
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b59675c3d95a9bb0800000000000000
-      internalID: -4928528076117731911
+      spriteID: 75b84df8871332df0800000000000000
+      internalID: -206266764050003113
       vertices: []
       indices: 
       edges: []

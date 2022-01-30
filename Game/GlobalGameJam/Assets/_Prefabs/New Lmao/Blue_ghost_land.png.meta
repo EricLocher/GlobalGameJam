@@ -1,25 +1,19 @@
 fileFormatVersion: 2
-guid: 09db54871d4ad9843ad633b087950800
+guid: e8dd9a9e96bca4e45b3fb872039ac685
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8145164153467710100
-    second: Blue_ghost_push_0
+      213: -4410435112224750022
+    second: Blue_ghost_land_0
   - first:
-      213: -4961087364306042450
-    second: Blue_ghost_push_1
+      213: 5394380975565947497
+    second: Blue_ghost_land_1
   - first:
-      213: 3176041680577495490
-    second: Blue_ghost_push_2
+      213: 3813246349873735635
+    second: Blue_ghost_land_2
   - first:
-      213: -3521498881861534561
-    second: Blue_ghost_push_3
-  - first:
-      213: 2501666231002558597
-    second: Blue_ghost_push_4
-  - first:
-      213: -4928528076117731911
-    second: Blue_ghost_push_5
+      213: 6091894538991992485
+    second: Blue_ghost_land_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,127 +115,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Blue_ghost_push_0
+      name: Blue_ghost_land_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 34
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49a20b484af690170800000000000000
-      internalID: 8145164153467710100
+      spriteID: a360fe602acfac2c0800000000000000
+      internalID: -4410435112224750022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue_ghost_push_1
+      name: Blue_ghost_land_1
       rect:
         serializedVersion: 2
-        x: 34
+        x: 32
         y: 0
-        width: 34
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea10cdeb35da62bb0800000000000000
-      internalID: -4961087364306042450
+      spriteID: 962cbb7aae0bcda40800000000000000
+      internalID: 5394380975565947497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue_ghost_push_2
+      name: Blue_ghost_land_2
       rect:
         serializedVersion: 2
-        x: 68
+        x: 64
         y: 0
-        width: 34
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c108a2c411931c20800000000000000
-      internalID: 3176041680577495490
+      spriteID: 3d7674d0a5f5be430800000000000000
+      internalID: 3813246349873735635
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue_ghost_push_3
+      name: Blue_ghost_land_3
       rect:
         serializedVersion: 2
-        x: 102
+        x: 96
         y: 0
-        width: 34
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9c35b5bc6f112fc0800000000000000
-      internalID: -3521498881861534561
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blue_ghost_push_4
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 0
-        width: 34
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5807f75ce24b7b220800000000000000
-      internalID: 2501666231002558597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blue_ghost_push_5
-      rect:
-        serializedVersion: 2
-        x: 170
-        y: 0
-        width: 34
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b59675c3d95a9bb0800000000000000
-      internalID: -4928528076117731911
+      spriteID: 5ae72c59ec1ca8450800000000000000
+      internalID: 6091894538991992485
       vertices: []
       indices: 
       edges: []
