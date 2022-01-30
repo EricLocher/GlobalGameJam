@@ -1,31 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8575262990541579713
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6050e2d5de785ce4d931e4dbdbf2d755, type: 3}
-  m_Name: ChromaticAberration
-  m_EditorClassIdentifier: 
-  active: 0
-  enabled:
-    overrideState: 1
-    value: 1
-  spectralLut:
-    overrideState: 0
-    value: {fileID: 0}
-    defaultState: 1
-  intensity:
-    overrideState: 1
-    value: 0.219
-  fastMode:
-    overrideState: 0
-    value: 0
 --- !u!114 &-8375565037895573203
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -44,10 +18,10 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 20
+    value: 1
   threshold:
     overrideState: 1
-    value: 1.15
+    value: 0.5
   softKnee:
     overrideState: 1
     value: 0.439
@@ -131,20 +105,20 @@ MonoBehaviour:
     overrideState: 1
     value: 10
   colorFilter:
-    overrideState: 1
-    value: {r: 1, g: 1, b: 1, a: 1}
+    overrideState: 0
+    value: {r: 0, g: 1, b: 0.2386775, a: 1}
   hueShift:
     overrideState: 0
     value: 0
   saturation:
     overrideState: 1
-    value: 10
+    value: 25
   brightness:
     overrideState: 0
     value: 0
   postExposure:
-    overrideState: 1
-    value: 0.2
+    overrideState: 0
+    value: 0
   contrast:
     overrideState: 1
     value: 10
@@ -1400,7 +1374,6 @@ MonoBehaviour:
   - {fileID: -8375565037895573203}
   - {fileID: 5765329173190774699}
   - {fileID: -7972310922566920724}
-  - {fileID: -8575262990541579713}
 --- !u!114 &5765329173190774699
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1428,10 +1401,10 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.293
+    value: 0.161
   smoothness:
     overrideState: 1
-    value: 0.2
+    value: 1
   roundness:
     overrideState: 1
     value: 1
@@ -1439,9 +1412,9 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   mask:
-    overrideState: 0
-    value: {fileID: 0}
+    overrideState: 1
+    value: {fileID: 2800000, guid: dffef66376be4fa480fb02b19edbe903, type: 3}
     defaultState: 1
   opacity:
-    overrideState: 0
+    overrideState: 1
     value: 1
