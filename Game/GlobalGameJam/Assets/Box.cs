@@ -33,7 +33,7 @@ public class Box : MonoBehaviour, IInteractable
         if (boxOnHead)
         {
             Vector2 playerPos = player.transform.position;
-            boxPos = new Vector2(player.transform.position.x, player.transform.position.y + 0.5f);
+            boxPos = new Vector2(player.transform.position.x, player.transform.position.y + 1f);
             gameObject.transform.position = boxPos;
         }
         else
@@ -42,15 +42,16 @@ public class Box : MonoBehaviour, IInteractable
     }
     public void interact()
     {
-        Debug.Log("hell");
         if(boxOnHead == true)
         {
             boxOnHead = false;
+            gameObject.GetComponent<Rigidbody2D>().mass = 10;
         }
         else if (boxOnHead == false)
-        boxOnHead = true;
-        //if box on head not true then carry crate
-        // if box on head true then drop crate
+        {
+            boxOnHead = true;
+            gameObject.GetComponent<Rigidbody2D>().mass = 0;
 
+        }
     }
 }
