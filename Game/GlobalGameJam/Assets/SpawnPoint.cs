@@ -8,10 +8,12 @@ public class SpawnPoint : MonoBehaviour
     public static SpawnPoint Instance { get { return _instance; } }
 
     public static Vector2 pos;
+    public static Vector2 startPos;
+
 
     void Awake()
     {
-        pos = transform.position;
+        startPos = transform.position;
 
 
         if (_instance == null)
@@ -22,6 +24,10 @@ public class SpawnPoint : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+
+        pos = startPos;
+
     }
 
 

@@ -24,16 +24,19 @@ public class LevelManager : MonoBehaviour
     public static void LoadScene(int index)
     {
         SceneManager.LoadScene(index);
+        SpawnPoint.pos = SpawnPoint.startPos;
     }
 
     public static void NextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SpawnPoint.pos = SpawnPoint.startPos;
     }
 
     public static void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SpawnPoint.pos = SpawnPoint.startPos;
     }
 
 }
