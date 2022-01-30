@@ -42,6 +42,7 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Enemy"), LayerMask.NameToLayer("Enemy"), true);
         Init();
     }
 
