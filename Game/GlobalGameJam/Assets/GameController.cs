@@ -54,6 +54,11 @@ public class GameController : MonoBehaviour
         {          
             FlipState();
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            LevelManager.RestartLevel();
+        }
+
     }
 
     public static void Init()
