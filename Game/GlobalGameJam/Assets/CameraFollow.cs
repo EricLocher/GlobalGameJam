@@ -9,7 +9,6 @@ public class CameraFollow : MonoBehaviour
     public bool followTarget = true;
     Camera MainCam;
     Vector3 targetPos;
-    [SerializeField] CameraBounds cameraBounds;
 
     float cameraWidth;
     float cameraHeight;
@@ -26,27 +25,14 @@ public class CameraFollow : MonoBehaviour
     void FixedUpdate()
     {
 
-        if(target == null) { target = PlayerController.playerTransform; }
+        if (target == null) { target = PlayerController.playerTransform; }
 
         if (followTarget == true)
         {
 
-            if(
-                target.position.x - cameraWidth < cameraBounds.pos.x - cameraBounds.size.x/2
-                ||
-                target.position.x + cameraWidth > cameraBounds.pos.x + cameraBounds.size.x/2
-                ||
-                target.position.y - cameraHeight < cameraBounds.pos.y - cameraBounds.size.y/2
-                ||
-                target.position.y + cameraHeight > cameraBounds.pos.y + cameraBounds.size.y/2
-              )
-            {
 
-            }
-            else
-            {
-                targetPos = new Vector3(target.position.x, target.position.y, -10);
-            }
+            targetPos = new Vector3(target.position.x, target.position.y, -10);
+
 
             targetPos.z = -10;
 
@@ -56,18 +42,4 @@ public class CameraFollow : MonoBehaviour
         }
     }
 
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireCube(cameraBounds.pos, cameraBounds.size);
-    }
-
-}
-
-[Serializable]
-class CameraBounds
-{
-    public Vector2 pos;
-    public Vector2 size;
 }
