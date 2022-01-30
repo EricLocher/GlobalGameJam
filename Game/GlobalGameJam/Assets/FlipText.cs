@@ -7,13 +7,9 @@ using TMPro;
 public class FlipText : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI text;
-
-
     void Update()
     {
         text.text = "Flips Remaining : " + Level.amountOfFlips; 
     }
-
-
 
 }

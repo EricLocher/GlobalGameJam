@@ -8,7 +8,6 @@ public class Score : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI text;
 
-
     void Update()
     {
         text.text = "Score : " + Level.score * 100; 
